@@ -1,12 +1,11 @@
 **Indian Sign Language Recognition (ISL) System**
 
 
-**Project Overview**
-
+📌 **Project Overview**
 
 This project presents a comprehensive Indian Sign Language (ISL) recognition system, encompassing both static image classification and dynamic gesture recognition from video sequences. The system aims to facilitate real-time, accurate interpretation of ISL signs to support communication accessibility. Utilizing state-of-the-art computer vision and deep learning frameworks, this project bridges the gap between raw visual data and semantic gesture understanding.
 
-**Dataset Description**
+📌 **Dataset Description**
 1. Static Gesture Dataset
 The static gesture dataset consists of images representing isolated Indian Sign Language (ISL) signs such as "house," "love," "please," "sleep," and "understand." These images were collected from varied participants under different lighting and backgrounds to ensure diversity. Each image is resized to 224×224 pixels and normalized to prepare it for convolutional neural network input. To improve robustness and generalization during training, a set of augmentations—including horizontal flips, brightness and contrast adjustments, rotations up to ±15 degrees, and small translations and scaling—were applied using the Albumentations library. The dataset is organized in folders named by gesture class, facilitating straightforward loading and label mapping.
 
@@ -46,7 +45,14 @@ Continuous motion patterns
 
 The CNN+LSTM hybrid architecture bridges spatial and temporal modeling, making it suitable for real-world continuous signing.
 
-🚀 **Why the Shift from ResNet to LSTM-based Model?**
+📌 **TECH STACK:**
+Languages: Python
+Deep Learning Frameworks: TensorFlow/Keras (dynamic model), PyTorch (static model)
+Computer Vision: OpenCV, MediaPipe Holistic
+Data Augmentation: Albumentations
+Model Architectures: ResNet18 for static gestures, LSTM for dynamic gestures
+
+📌 **Why the Shift from ResNet to LSTM-based Model?**
 
 While the static ResNet model worked well for gestures recognizable from a single frame, many ISL signs cannot be captured through static information alone. They rely heavily on:
 The motion path of the hand
@@ -59,14 +65,10 @@ This limitation motivated the move to a temporal model, where LSTMs maintain mem
 
 The transition from static images to a video dataset was a natural progression to better capture the complexity of dynamic sign language gestures.
 
-**Results**
-
-    1. Static gesture model achieved strong accuracy on a vocabulary of 5 isolated ISL signs using ResNet18 with extensive augmentation.
-
-    2. Dynamic LSTM model captured temporal information, enabling recognition of continuous gestures with effective confidence-based inference.
-
-    3. Real-time system operates at interactive frame rates, incorporating fallback detections and clean UI overlays.
-
+📌 **Results**
+1. Static gesture model achieved strong accuracy on a vocabulary of 5 isolated ISL signs using ResNet18 with extensive augmentation.
+2. Dynamic LSTM model captured temporal information, enabling recognition of continuous gestures with effective confidence-based inference.
+3. Real-time system operates at interactive frame rates, incorporating fallback detections and clean UI overlays.
 
 🏁 **Conclusion**
 
