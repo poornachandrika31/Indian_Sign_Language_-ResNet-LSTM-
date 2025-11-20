@@ -17,9 +17,9 @@ The dynamic dataset captures continuous ISL gestures such as "yawn," "man," and 
 This project explores Indian Sign Language (ISL) gesture recognition by gradually evolving from a static image classification pipeline to a dynamic sequence-based video recognition model. The main goal was to understand how spatial information alone compares to a model that also captures temporal motion, which is essential for realistic sign interpretation.
 The methodology is divided into two stages:
 
-Static image-based gesture recognition (ResNet18)
+a) Static image-based gesture recognition (ResNet18)
 
-Dynamic video-based gesture recognition (CNN + LSTM)
+b) Dynamic video-based gesture recognition (CNN + LSTM)
 
 📍 1. Static Gesture Recognition (ResNet18)
 
@@ -30,9 +30,7 @@ This stage helped establish a baseline accuracy and provided insights into how w
 
 📍 2. Dynamic Gesture Recognition (CNN + LSTM)
 
-To handle gestures involving motion, trajectory, and sequence progression, the project moved toward a video-based approach. Each video clip was converted into a series of frames, and a CNN backbone (ResNet) was used to extract per-frame spatial features.
-
-These extracted features were then passed to an LSTM layer, which learns temporal dependencies across frames.
+To handle gestures involving motion, trajectory, and sequence progression, the project moved toward a video-based approach. Each video clip was converted into a series of frames, and a CNN backbone (ResNet) was used to extract per-frame spatial features. These extracted features were then passed to an LSTM layer, which learns temporal dependencies across frames.
 This enables the model to understand:
 
 Direction of movement
